@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    	<script type="text/javascript" src="shell-sort.js"></script>
+    	<script type="text/javascript">
+    		
+    function shuffle() {
+    	return Math.random() - 0.5;
+    }
+
+	    var Clock = {
+	    	 "time": function() {
+	    		this.start = new Date().getTime();
+	    	},
+
+	    	"timeEnd": function() {
+	    		this.end = new Date().getTime();
+	    		return Math.floor(this.end - this.start);
+	    	}
+	    }
+
+    		var array = [];
+    		for (var i = 0; i < 10000; i++) {
+    			array[i] = i;
+    		}
+
+    		array.sort(shuffle);
+    		Clock.time();
+    		console.time();
+    		shellSort(array);
+    		console.timeEnd();
+    		console.log(Clock.timeEnd());
+    		console.log(array);
+    	</script>
+    </body>
+</html>

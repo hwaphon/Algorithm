@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    	<script type="text/javascript" src="merge-sort.js"></script>
+    	<script type="text/javascript">
+
+            var array = new ArrayList();
+
+            for (var i = 0; i < 50; i++) {
+                array.insert(i);
+           }
+
+           array.shuffle();
+    		for(var i = 100; i < 1000000; i++) {
+    			array.insert(i);
+    		}
+
+            var newArray = [];
+            for(var i = 50; i < 90; i++) {
+                newArray.push(i);
+            }
+
+            newArray.sort(function() {
+                return Math.random() - 0.5;
+            });
+
+            for(var i = 0; i < newArray.length; i++) {
+                array.insert(newArray[i]);
+            }
+            console.time();
+            array.mergeSort();
+            console.timeEnd();
+            array.toString();
+    	</script>
+    </body>
+</html>
