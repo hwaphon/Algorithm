@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript" src="quick-sort.js"></script>
+		<script type="text/javascript">
+			var array = new ArrayList();
+
+			for(var i = 0; i < 1000000; i++){
+				array.insert(1);
+			}
+
+			array.shuffle();
+
+			console.time();
+			array.quickSort();
+			console.timeEnd();
+			array.toString();
+		</script>
+	</body>
+</html>
