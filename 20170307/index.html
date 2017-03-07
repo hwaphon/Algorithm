@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    	<script type="text/javascript" src="heap-sort.js"></script>
+    	<script type="text/javascript">
+    		var heap = new Heap();
+
+    		for(var i = 1000000; i >=0; i--){
+    			heap.insert(i);
+    		}
+    		console.time();
+    		heap.sort();
+    		console.timeEnd();
+
+    		heap.toString();
+    	</script>
+    </body>
+</html>
