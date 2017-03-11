@@ -2,7 +2,7 @@
 * @Author: hwaphon
 * @Date:   2017-03-10 12:36:05
 * @Last Modified by:   hwaphon
-* @Last Modified time: 2017-03-10 12:36:45
+* @Last Modified time: 2017-03-10 19:37:53
 */
 
 function radixSort(array) {
@@ -17,7 +17,7 @@ function radixSort(array) {
         max = array[0];
     for (i = 1; i < l; i++) {
         if (array[i] > max) {
-            max = array[i]
+            max = array[i];
         }
     }
     loop = (max + '').length;
